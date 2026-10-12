@@ -1,0 +1,10 @@
+# BirdNET inference container dependencies.
+# birdnetlib wraps the BirdNET-Analyzer TFLite model.
+birdnetlib==0.18.0
+librosa==0.10.2
+resampy==0.4.3
+numpy<2.0
+# tflite-runtime keeps the image far smaller than full tensorflow.
+tflite-runtime==2.14.0
+boto3>=1.34.0
+requests>=2.31.0

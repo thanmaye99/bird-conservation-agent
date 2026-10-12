@@ -1,0 +1,11 @@
+# Local development / test-harness dependencies (scripts/local_test.py).
+# These mirror what the inference container installs, so you can run BirdNET
+# and the Bedrock agent on your laptop before deploying.
+birdnetlib==0.18.0
+librosa==0.10.2
+resampy==0.4.3
+numpy<2.0
+tflite-runtime==2.14.0 ; platform_system != "Darwin"
+tensorflow==2.14.0 ; platform_system == "Darwin"
+boto3>=1.34.0
+requests>=2.31.0

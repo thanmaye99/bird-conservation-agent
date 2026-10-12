@@ -1,0 +1,13 @@
+# Minimal dependencies for the basic bird identifier (identify_bird.py).
+birdnetlib>=0.17.2
+# Photo + conservation-status lookups (Wikipedia / GBIF).
+requests>=2.31.0
+# Lets Python use the OS trust store so lookups work behind a corporate SSL proxy.
+truststore>=0.9.0
+librosa>=0.10.2
+resampy>=0.4.3
+numpy<2.0
+# BirdNET needs a TFLite interpreter. tflite-runtime is lighter but has no macOS
+# wheels, so on Mac (and Python 3.12) we use full tensorflow, which bundles it.
+tflite-runtime>=2.14.0 ; platform_system != "Darwin"
+tensorflow>=2.16.0 ; platform_system == "Darwin"
